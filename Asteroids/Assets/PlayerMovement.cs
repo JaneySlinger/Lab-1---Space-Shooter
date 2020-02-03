@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public GameObject shot;
+    public Transform shotTransform;
+
+    public float fireRate = 0.5f;
+    private float nextFire = 0.0f;
+
     public float speed = 7.0f;
     public float xMin = -4.0f;
     public float xMax = 4.0f;
@@ -32,5 +38,14 @@ public class PlayerMovement : MonoBehaviour
             r.position.y,
             Mathf.Clamp(r.position.z, zMin, zMax)
         );
+
+        if(Input.GetButton("Fire1") && Time.time > nextFire){
+            nextFire = Time.time + fireRate;
+            Instantiate(
+                shot,
+                shotTransform.position,
+                shotTransform.rotation
+            );
+        }
     }
 }
