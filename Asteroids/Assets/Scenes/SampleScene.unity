@@ -554,8 +554,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hazard: {fileID: 1936789640301322905, guid: 1b3619d813d781547b51e0fee48c7fe0, type: 3}
   spawnValues: {x: 4, y: 0, z: 7}
-  hazardCount: 10
-  spawnWait: 1
+  hazardCount: 15
+  spawnWait: 0.5
   waveWait: 5
 --- !u!4 &951562373
 Transform:
@@ -688,8 +688,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shot: {fileID: 4226407638395032274, guid: e34581481ed1152448524254da8363db, type: 3}
   shotTransform: {fileID: 771409622}
-  fireRate: 0.3
-  speed: 7
+  fireRate: 0.2
+  speed: 10
   xMin: -4
   xMax: 4
   zMin: -5
